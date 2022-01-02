@@ -1,11 +1,8 @@
-package com.yang.bootdemo.Consumer.config;
+package com.yang.bootdemo.Producter.config;
 
 import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
-import java.util.HashMap;
-import java.util.Map;
 
 /***
  * 死信队列

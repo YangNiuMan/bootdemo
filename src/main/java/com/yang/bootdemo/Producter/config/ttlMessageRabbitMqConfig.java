@@ -1,4 +1,4 @@
-package com.yang.bootdemo.Consumer.config;
+package com.yang.bootdemo.Producter.config;
 
 import org.springframework.amqp.core.Binding;
 import org.springframework.amqp.core.BindingBuilder;

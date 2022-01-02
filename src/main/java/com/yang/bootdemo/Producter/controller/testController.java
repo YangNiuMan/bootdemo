@@ -1,5 +1,6 @@
-package com.yang.bootdemo.Consumer.controller;
+package com.yang.bootdemo.Producter.controller;
 
+import com.yang.bootdemo.config.MqSendMsg;
 import org.springframework.amqp.core.Message;
 import org.springframework.amqp.core.MessageDeliveryMode;
 import org.springframework.amqp.core.MessageProperties;
@@ -14,6 +15,9 @@ public class testController {
     @Autowired
     RabbitTemplate rabbitTemplate;
 
+    @Autowired
+    MqSendMsg mqSendMsg;
+
     /**
      * 点对点发送
      * @return
@@ -23,6 +27,17 @@ public class testController {
         rabbitTemplate.convertAndSend("direct-exchange", "sms-direct", "sms-direct消息发送测试");
         rabbitTemplate.convertAndSend("direct-exchange", "email-direct", "email-direct消息发送测试");
         rabbitTemplate.convertAndSend("direct-exchange", "email-direct12", "email-direct消息发送测试");
+        return "direct发送成功";
+    }
+
+    /**
+     * 点对发送失败测试
+     * @return
+     */
+    @RequestMapping("direct1")
+    public String direct1(){
+        //rabbitTemplate.convertAndSend("direct-exchange1", "sms-direct1", "sms-direct消息发送测试");
+        mqSendMsg.sendMsg();
         return "direct发送成功";
     }
 

@@ -1,4 +1,4 @@
-package com.yang.bootdemo.Consumer.config;
+package com.yang.bootdemo.Producter.config;
 
 import org.springframework.amqp.core.*;
 import org.springframework.context.annotation.Bean;
@@ -19,6 +19,11 @@ public class DirectRabbitMqConfig {
         Map<String, Object> args = new HashMap<>(8);
         args.put("alternate-exchange" , "backup-fanout-exchange");
         return new DirectExchange("direct-exchange", true, false, args);
+    }
+
+    @Bean
+    public DirectExchange directExchange1(){
+        return new DirectExchange("direct-exchange1", true, false);
     }
 
     /**
