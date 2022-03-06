@@ -20,7 +20,7 @@ public class LogAspectAnno {
 
     }
 
-    @Around("pointcut()")
+    @Around(value = "pointcut()")
     public Object around(ProceedingJoinPoint joinPoint) throws Throwable {
         System.out.println("执行了前置通知》》》》》》》》");
         //获取方法的参数
@@ -51,7 +51,7 @@ public class LogAspectAnno {
         String value = log.value();
         //执行方法
         Object proceed = joinPoint.proceed();
-        System.out.println("执行了后置通知》》》》》》》》");
+        System.out.println("执行了后置通知》》》》》》》》"+proceed);
         return proceed;
     }
 }
