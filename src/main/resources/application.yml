@@ -1,2 +1,6 @@
 server:
   port: 8000
+
+spring:
+  datasource:
+    db1:
