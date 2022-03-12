@@ -27,5 +27,9 @@ public class UserController {
         return userService.find(id);
     }
 
+    @GetMapping("find2")
+    public User find2(@RequestParam("id") Integer id){
+        return userService.find2(id);
+    }
 
 }

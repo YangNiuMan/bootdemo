@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 //import org.springframework.cloud.context.config.annotation.RefreshScope;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
@@ -24,6 +25,7 @@ public class DataSourceConfig2 {
 
 
     @Bean("db2DataSource")
+    @RefreshScope
     @ConfigurationProperties(prefix = "spring.datasource.db2") //读取application.yml中的配置参数映射成为一个对象
     public DataSource getDb2DataSource(){
         return DataSourceBuilder.create().build();

@@ -10,4 +10,6 @@ import org.springframework.stereotype.Repository;
 public interface UserMapper1 {
 
     int insert(User user);
+
+    User find(Integer id);
 }

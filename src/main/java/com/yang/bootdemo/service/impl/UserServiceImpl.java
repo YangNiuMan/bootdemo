@@ -23,6 +23,11 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User find(Integer id) {
+        return userMapper1.find(id);
+    }
+
+    @Override
+    public User find2(Integer id) {
         return userMapper2.find(id);
     }
 }

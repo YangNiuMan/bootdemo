@@ -32,18 +32,18 @@
             <artifactId>mysql-connector-java</artifactId>
             <scope>runtime</scope>
         </dependency>
-<!--        &lt;!&ndash;nacos-config&ndash;&gt;
+        <!--nacos-config-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
             <version>2.1.0.RELEASE</version>
         </dependency>
-        &lt;!&ndash;nacos-discovery&ndash;&gt;
+        <!--nacos-discovery-->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
             <version>2.1.0.RELEASE</version>
-        </dependency>-->
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
