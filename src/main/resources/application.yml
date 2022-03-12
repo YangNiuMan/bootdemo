@@ -1,8 +1,6 @@
 server:
   port: 8000
 spring:
-  profiles:
-    active: dev
   datasource:
     db1:
       type: com.alibaba.druid.pool.DruidDataSource
