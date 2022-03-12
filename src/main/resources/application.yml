@@ -1,17 +1,18 @@
 server:
   port: 8000
-
 spring:
+  profiles:
+    active: dev
   datasource:
     db1:
       type: com.alibaba.druid.pool.DruidDataSource
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://106.15.236.44:3306/db1?serverTimezone=GMT%2B8
+      jdbc-url: jdbc:mysql://106.15.236.44:3306/db1?serverTimezone=GMT%2B8
       username: root
       password: root
     db2:
       type: com.alibaba.druid.pool.DruidDataSource
       driver-class-name: com.mysql.cj.jdbc.Driver
-      url: jdbc:mysql://106.15.236.44:3306/db2?serverTimezone=GMT%2B8
+      jdbc-url: jdbc:mysql://106.15.236.44:3306/db2?serverTimezone=GMT%2B8
       username: root
       password: root
