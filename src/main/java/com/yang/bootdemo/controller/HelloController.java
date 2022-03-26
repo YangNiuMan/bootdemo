@@ -17,7 +17,6 @@ public class HelloController {
         System.out.println(message+"333");
         System.out.println(message+"555");
         System.out.println(message+"666");
-        System.out.println(message+"777");
         return message;
     }
 
