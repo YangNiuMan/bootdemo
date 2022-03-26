@@ -14,7 +14,6 @@ public class HelloController {
     public String hello(String message){
         System.out.println(message);
         System.out.println(message+"222");
-        System.out.println(message+"333");
         return message;
     }
 
