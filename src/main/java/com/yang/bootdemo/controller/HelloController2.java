@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController2 {
 
-    @RequestMapping("hello")
+    @RequestMapping("hello2")
     public String hello(String message){
         System.out.println(message);
         System.out.println(message+"222");
